@@ -32,8 +32,7 @@ class connection{
 
     public function runDQL($query){
         $result = $this->con->query($query);
-        return $result;
-         
+        return $result;  
     }
 
     public function __destruct()

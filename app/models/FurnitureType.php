@@ -26,7 +26,6 @@ class FurnitureType extends connection implements readInterface, createInterface
     public function setId($id)
     {
         $this->id = $id;
-
         return $this;
     }
 
@@ -46,7 +45,6 @@ class FurnitureType extends connection implements readInterface, createInterface
     public function setHight($hight)
     {
         $this->hight = $hight;
-
         return $this;
     }
 
@@ -66,7 +64,6 @@ class FurnitureType extends connection implements readInterface, createInterface
     public function setWidth($width)
     {
         $this->width = $width;
-
         return $this;
     }
 
@@ -86,7 +83,6 @@ class FurnitureType extends connection implements readInterface, createInterface
     public function setLength($length)
     {
         $this->length = $length;
-
         return $this;
     }
 
@@ -106,11 +102,8 @@ class FurnitureType extends connection implements readInterface, createInterface
     public function setSKU($SKU)
     {
         $this->SKU = $SKU;
-
         return $this;
     }
-
-
 
     public function read()
     {
@@ -129,8 +122,7 @@ class FurnitureType extends connection implements readInterface, createInterface
         `furniture_type`
     ON
         `product`.`SKU` = `furniture_type`.`SKU`
-";
-
+                ";
         return $this->runDQL($query);
     }
 
@@ -138,7 +130,6 @@ class FurnitureType extends connection implements readInterface, createInterface
     {
         $query = "INSERT INTO `furniture_type` (`hight`, `width`, `length`, `SKU`)
         VALUES ('{$this->hight}', '{$this->width}', '{$this->length}', '{$this->SKU}')";
-
         return $this->runDML($query);
     }
 }

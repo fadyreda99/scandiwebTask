@@ -27,7 +27,6 @@ class BookType extends connection implements readInterface, createInterface
     public function setId($id)
     {
         $this->id = $id;
-
         return $this;
     }
 
@@ -47,7 +46,6 @@ class BookType extends connection implements readInterface, createInterface
     public function setWeight($weight)
     {
         $this->weight = $weight;
-
         return $this;
     }
 
@@ -67,10 +65,8 @@ class BookType extends connection implements readInterface, createInterface
     public function setSKU($SKU)
     {
         $this->SKU = $SKU;
-
         return $this;
     }
-
 
     public function read()
     {
@@ -87,8 +83,7 @@ class BookType extends connection implements readInterface, createInterface
         `book_type`
     ON
         `product`.`SKU` = `book_type`.`SKU`
-";
-
+                ";
         return $this->runDQL($query);
     }
 
@@ -96,7 +91,6 @@ class BookType extends connection implements readInterface, createInterface
     {
         $query = "INSERT INTO `book_type` (`weight`, `SKU`)
         VALUES ('{$this->weight}', '{$this->SKU}')";
-
         return $this->runDML($query);
     }
 }

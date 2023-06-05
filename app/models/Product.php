@@ -25,7 +25,6 @@ class Product extends connection implements deleteInterface, createInterface{
     public function setSKU($SKU)
     {
         $this->SKU = $SKU;
-
         return $this;
     }
 
@@ -45,7 +44,6 @@ class Product extends connection implements deleteInterface, createInterface{
     public function setName($name)
     {
         $this->name = $name;
-
         return $this;
     }
 
@@ -65,7 +63,6 @@ class Product extends connection implements deleteInterface, createInterface{
     public function setPrice($price)
     {
         $this->price = $price;
-
         return $this;
     }
 
@@ -85,12 +82,8 @@ class Product extends connection implements deleteInterface, createInterface{
     public function setType_id($type_id)
     {
         $this->type_id = $type_id;
-
         return $this;
     }
-
-   
-  
 
     public function delete($deleteItems){
         $query = "DELETE FROM `product` WHERE `SKU`='{$deleteItems}'";
@@ -100,13 +93,11 @@ class Product extends connection implements deleteInterface, createInterface{
     public function create(){
         $query = "INSERT INTO `product` (`SKU`, `name`, `price`, `type_id`)
         VALUES ('{$this->SKU}', '{$this->name}', '{$this->price}', '{$this->type_id}')";
-
         return $this->runDML($query);
     }
 
     public function getProductBySKU(){   //for unique
             $query = "SELECT * FROM `product` WHERE `SKU`='{$this->SKU}'";
-
             return $this->runDQL($query);
     }
 

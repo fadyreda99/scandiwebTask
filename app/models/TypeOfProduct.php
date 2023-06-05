@@ -25,7 +25,6 @@ class TypeOfProduct extends connection implements readInterface {
     public function setId($id)
     {
         $this->id = $id;
-
         return $this;
     }
 
@@ -45,11 +44,9 @@ class TypeOfProduct extends connection implements readInterface {
     public function setType($type)
     {
         $this->type = $type;
-
         return $this;
     }
 
-    
     public function read()
     {
         $query = "SELECT * FROM `type_of_product`";

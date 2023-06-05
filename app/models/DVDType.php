@@ -25,7 +25,6 @@ class DVDType extends connection implements readInterface, createInterface{
     public function setId($id)
     {
         $this->id = $id;
-
         return $this;
     }
 
@@ -45,7 +44,6 @@ class DVDType extends connection implements readInterface, createInterface{
     public function setSize($size)
     {
         $this->size = $size;
-
         return $this;
     }
 
@@ -65,7 +63,6 @@ class DVDType extends connection implements readInterface, createInterface{
     public function setSKU($SKU)
     {
         $this->SKU = $SKU;
-
         return $this;
     }
 
@@ -84,8 +81,7 @@ class DVDType extends connection implements readInterface, createInterface{
                     `dvd_disc_type`
                 ON
                     `product`.`SKU` = `dvd_disc_type`.`SKU`
-        ";
-
+                ";
         return $this->runDQL($query);
         
     }
@@ -93,7 +89,6 @@ class DVDType extends connection implements readInterface, createInterface{
     public function create(){
         $query = "INSERT INTO `dvd_disc_type` (`size`, `SKU`)
         VALUES ('{$this->size}', '{$this->SKU}')";
-
         return $this->runDML($query);
     }
 
