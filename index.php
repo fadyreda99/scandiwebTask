@@ -32,8 +32,8 @@ if (isset($_POST["delete"]) && isset($_POST["deleteId"])) {
         <div class="col-9"><span class="title"> Product List </span></div>
         <div class="col-md-3 ms-auto align-self-center">
           <span class="btns">
-            <a href="product-add.php" class="btn btn-primary">Add</a>
-            <button type="submit" class="btn btn-danger" name="delete">Mass Delete</button>
+            <a href="product-add.php" class="btn btn-primary">ADD</a>
+            <button id="delete-product-btn" type="submit" class="btn" name="delete">MASS DELETE</button>
           </span>
         </div>
       </div>
@@ -55,7 +55,7 @@ if (isset($_POST["delete"]) && isset($_POST["deleteId"])) {
 
                   <div class="card-title text-start">
                     <div>
-                      <input class="form-check-input" type="checkbox" id="checkboxNoLabel" name="deleteId[]" value="<?= $dvdType['SKU'] ?>" aria-label="..." />
+                      <input class="delete-checkbox form-check-input" type="checkbox" id="checkboxNoLabel" name="deleteId[]" value="<?= $dvdType['SKU'] ?>" aria-label="..." />
                     </div>
                   </div>
 
@@ -85,7 +85,7 @@ if (isset($_POST["delete"]) && isset($_POST["deleteId"])) {
 
                   <div class="card-title text-start">
                     <div>
-                      <input class="form-check-input" type="checkbox" id="checkboxNoLabel" name="deleteId[]" value="<?= $bookType['SKU'] ?>" aria-label="..." />
+                      <input class="delete-checkbox form-check-input" type="checkbox" id="checkboxNoLabel" name="deleteId[]" value="<?= $bookType['SKU'] ?>" aria-label="..." />
                     </div>
                   </div>
 
@@ -115,7 +115,7 @@ if (isset($_POST["delete"]) && isset($_POST["deleteId"])) {
 
                   <div class="card-title text-start">
                     <div>
-                      <input class="form-check-input" type="checkbox" id="checkboxNoLabel" name="deleteId[]" value="<?= $furnitureType['SKU'] ?>" aria-label="..." />
+                      <input class="delete-checkbox form-check-input" type="checkbox" id="checkboxNoLabel" name="deleteId[]" value="<?= $furnitureType['SKU'] ?>" aria-label="..." />
                     </div>
                   </div>
 

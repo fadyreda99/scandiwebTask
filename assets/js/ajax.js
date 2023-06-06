@@ -39,6 +39,16 @@ $(document).ready(function () {
           }, 2000);
         }
 
+        if (response.invalid.invalidPrice) {
+          $(".invalidPrice").html(
+            "<p>" + response.invalid.invalidPrice + "</p>"
+          );
+          setTimeout(() => {
+            $(".invalidPrice").html(" ");
+          }, 2000);
+        }
+        
+
         if (response.productRequierdErrors.typeMsg) {
           $(".typeMsg").html(
             "<p>" + response.productRequierdErrors.typeMsg + "</p>"
@@ -65,10 +75,28 @@ $(document).ready(function () {
           }, 2000);
         }
 
+        if (response.invalid.invalidHeight) {
+          $(".invalidHeight").html(
+            "<p>" + response.invalid.invalidHeight + "</p>"
+          );
+          setTimeout(() => {
+            $(".invalidHeight").html(" ");
+          }, 2000);
+        }
+
         if (response.furnitureErrors.width) {
           $(".widthMsg").html("<p>" + response.furnitureErrors.width + "</p>");
           setTimeout(() => {
             $(".widthMsg").html(" ");
+          }, 2000);
+        }
+
+        if (response.invalid.invalidWidth) {
+          $(".invalidWidth").html(
+            "<p>" + response.invalid.invalidWidth + "</p>"
+          );
+          setTimeout(() => {
+            $(".invalidWidth").html(" ");
           }, 2000);
         }
 
@@ -81,11 +109,29 @@ $(document).ready(function () {
           }, 2000);
         }
 
+        if (response.invalid.invalidLength) {
+          $(".invalidLength").html(
+            "<p>" + response.invalid.invalidLength + "</p>"
+          );
+          setTimeout(() => {
+            $(".invalidLength").html(" ");
+          }, 2000);
+        }
+
         //dvd type
         if (response.dvdErrors.size) {
           $(".sizeMsg").html("<p>" + response.dvdErrors.size + "</p>");
           setTimeout(() => {
             $(".sizeMsg").html(" ");
+          }, 2000);
+        }
+
+        if (response.invalid.invalidSize) {
+          $(".invalidSize").html(
+            "<p>" + response.invalid.invalidSize + "</p>"
+          );
+          setTimeout(() => {
+            $(".invalidSize").html(" ");
           }, 2000);
         }
 
@@ -97,11 +143,22 @@ $(document).ready(function () {
           }, 2000);
         }
 
+        if (response.invalid.invalidWeight) {
+          $(".invalidWeight").html(
+            "<p>" + response.invalid.invalidWeight + "</p>"
+          );
+          setTimeout(() => {
+            $(".invalidWeight").html(" ");
+          }, 2000);
+        }
+
         if (response.success == 1) {
           window.location.href = "index.php";
         } else {
           console.log("there is an error");
         }
+
+        
       },
     });
   });

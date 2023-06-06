@@ -52,6 +52,7 @@ $typesRes = $typesObj->read();
             <div class="col-sm-3">
               <input type="number" class="form-control" id="price" name="price" />
               <div class="priceMsg text-danger"></div>
+              <div class="invalidPrice text-danger"></div>
             </div>
           </div>
 
@@ -61,14 +62,10 @@ $typesRes = $typesObj->read();
             <div class="col-sm-3">
               <select class="form-select" aria-label="Default select example" id="productType" name="productType">
                 <option value="0" selected>Type Switcher</option>
-                <?php
-                foreach ($typesRes as $type) { ?>
-                  <option data-cat=".<?= $type['type'] ?>" value="<?= $type['id'] ?>"><?= strtoupper($type['type']) ?></option>
-                <?php }
-                ?>
-                <!-- <option data-cat=".dvd" value="dvd">DVD</option>
-                    <option data-cat=".furniture" value="furniture">Furniture</option>
-                    <option data-cat=".book" value="book">Book</option> -->
+                <option data-cat=".furniture" value="1">Furniture</option>
+                <option data-cat=".dvd" value="2">DVD</option>
+
+                <option data-cat=".book" value="3">Book</option>
               </select>
               <div class="typeMsg text-danger"></div>
             </div>
@@ -85,6 +82,7 @@ $typesRes = $typesObj->read();
                   <input type="number" class="form-control" id="size" name="size" />
 
                   <div class="sizeMsg text-danger"></div>
+                  <div class="invalidSize text-danger"></div>
                 </div>
               </div>
               <p>"Please, provide size"</p>
@@ -98,6 +96,7 @@ $typesRes = $typesObj->read();
                   <input type="number" class="form-control" id="height" name="height" />
 
                   <div class="heightMsg text-danger"></div>
+                  <div class="invalidHeight text-danger"></div>
                 </div>
               </div>
 
@@ -107,6 +106,7 @@ $typesRes = $typesObj->read();
                   <input type="number" class="form-control" id="width" name="width" />
 
                   <div class="widthMsg text-danger"></div>
+                  <div class="invalidWidth text-danger"></div>
                 </div>
               </div>
 
@@ -116,6 +116,7 @@ $typesRes = $typesObj->read();
                   <input type="number" class="form-control" id="length" name="length" />
 
                   <div class="lengthMsg text-danger"></div>
+                  <div class="invalidLength text-danger"></div>
                 </div>
               </div>
               <p>"Please, provide dimensions"</p>
@@ -129,6 +130,7 @@ $typesRes = $typesObj->read();
                   <input type="number" class="form-control" id="weight" name="weight" />
 
                   <div class="weightMsg text-danger"></div>
+                  <div class="invalidWeight text-danger"></div>
                 </div>
               </div>
               <p>"Please, provide weight"</p>
